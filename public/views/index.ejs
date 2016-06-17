@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gambling is great</title>
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+</head>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+</script>
+
+<body>
+
+<div id="top">
+	<ul>
+  		<li><a href="/home">Home</a></li>
+  		<li><a href="/views/coinflip.ejs">Coinflip</a></li>
+  		<li><a href="profile.ejs">Profile</a></li>
+  		<li><a href="about.ejs">About</a></li>
+	</ul>
+</div>
+
+<% if (!user) { %>
+	<a href="auth/steam"><img src="https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_small.png" id="login"></a>
+<% } else { %>
+
+	<div id="profile">
+		<img src='<%= user.photos[0].value %>'/>
+		<p><%=user.displayName%></p>
+	</div>
+
+<% } %>
+
+<!-- Should redirect to homepage if you're not logged in -->
+</body>
+</html>

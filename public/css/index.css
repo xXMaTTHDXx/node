@@ -1,0 +1,58 @@
+#top ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #EFEFEF;
+}
+
+#top li {
+    float: left;
+}
+
+#top li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#profile img {
+	position: relative;
+	left: 1100px;
+	top: -40px;
+    border-radius:5px;
+    overflow:hidden;
+}
+
+#profile p {
+	color: black;
+	position: relative;
+	left: 1145px;
+	top: -85px;
+}
+
+#profile p:hover {
+	cursor: pointer;
+}
+
+#photo:hover {
+	cursor: pointer;
+}
+
+#login {
+	position: relative;
+	left: 1100px;
+	top: -35px;
+}
+
+/* Change the link color to #111 (black) on hover */
+#top li a:hover {
+    color: red;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+}

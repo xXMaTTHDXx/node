@@ -1,0 +1,21 @@
+<head>
+	<script type="text/javascript" src="/views/db.js"></script> 
+</head>
+<input id="tradeURL"></input><button id="sub" onclick="saveDB(<%=user.id%>)">Save URL</button>
+
+<% if(!user) {
+	window.location = 'localhost/home';
+} %>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+<script type="text/javascript">
+	var socket = io();
+
+	function saveDB(userID) {
+		var url = document.getElementById('tradeURL').value;
+		socket.emit("saveURL", userID, url);
+		console.log('sent');
+	}
+</script>
