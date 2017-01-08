@@ -17,7 +17,7 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new SteamStrategy({
   returnURL: 'http://localhost:3000/auth/steam/return',
   realm: 'http://localhost:3000/',
-  apiKey: '0BEDF741855D02ABDF25250C1914B945'
+  apiKey: '...'
 },
 function(identifier, profile, done) {
   process.nextTick(function () {
@@ -123,9 +123,9 @@ DATABASE
 
 var Client = require('mariasql');
 var host = 'localhost';
-var user = 'root';
-var pass = 'root';
-var db = 'quickbets';
+var user = '...';
+var pass = '...';
+var db = '...';
 
 var con = new Client({
   host: host,
